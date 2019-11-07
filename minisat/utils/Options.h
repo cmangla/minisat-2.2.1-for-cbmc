@@ -39,6 +39,7 @@ extern void parseOptions     (int& argc, char** argv, bool strict = false);
 extern void printUsageAndExit(int  argc, char** argv, bool verbose = false);
 extern void setUsageHelp     (const char* str);
 extern void setHelpPrefixStr (const char* str);
+extern bool parseSingleOption(const char* option);
 
 
 //==================================================================================================
@@ -86,6 +87,7 @@ class Option
     friend  void printUsageAndExit (int  argc, char** argv, bool verbose);
     friend  void setUsageHelp      (const char* str);
     friend  void setHelpPrefixStr  (const char* str);
+    friend  bool parseSingleOption (const char* option);
 };
 
 
